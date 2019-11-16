@@ -24,13 +24,26 @@ jobs:
   #         pwd
   #         ls -lah
   docker:
+    container:
+      image: node:10.16-jessie
+      env:
+        NODE_ENV: development
+      ports:
+        - 80
+      volumes:
+        - my_docker_volume:/volume_mount
+      options: --cpus 1
     steps:
       - name: My first step
         uses: docker://node:12
-      - 
-        run: |
+      - run: |
           node -v
           pwd
           whoami
           ls -lah
-          npm ci
+      - run: npm ci | true
+      - run: cd /volume_mount
+      - run: pwd
+
+
+- Your workflow file was invalid: The pipeline is not valid. .github/workflows/continuous-integration-workflow.yml (Line: 27, Col: 5): Required property is missing: runs-on
