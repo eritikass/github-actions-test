@@ -37,6 +37,8 @@ jobs:
     steps:
       - name: My first step
         uses: docker://node:12
+      - name: git show
+      - name: docker ps
       - run: |
           node -v
           pwd
