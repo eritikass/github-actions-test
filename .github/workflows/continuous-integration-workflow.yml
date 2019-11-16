@@ -27,6 +27,7 @@ jobs:
     steps:
       - name: My first step
         uses: docker://node:12
+      - 
         run: |
           node -v
           pwd
