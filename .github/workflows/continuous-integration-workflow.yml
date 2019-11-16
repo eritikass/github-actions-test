@@ -33,6 +33,7 @@ jobs:
       volumes:
         - my_docker_volume:/volume_mount
       options: --cpus 1
+    runs-on: ubuntu-latest
     steps:
       - name: My first step
         uses: docker://node:12
@@ -47,3 +48,6 @@ jobs:
 
 
 # - Your workflow file was invalid: The pipeline is not valid. .github/workflows/continuous-integration-workflow.yml (Line: 27, Col: 5): Required property is missing: runs-on
+
+# - Your workflow file was invalid: The pipeline is not valid. .github/workflows/continuous-integration-workflow.yml (Line: 27, Col: 5): Required property is missing: runs-on
+
