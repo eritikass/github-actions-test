@@ -3,36 +3,7 @@ name: Wuff-Wuff
 on: [push]
 
 jobs:
-  # build:
-  #   # Job name is Greeting
-  #   name: Greeting
-  #   # This job runs on Linux
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
-  #     - name: Hello world
-  #       uses: actions/hello-world-javascript-action@v1
-  #       with:
-  #         who-to-greet: 'Mona the Octocat'
-  #       id: hello
-  #     # This step prints an output (time) from the previous step's action.
-  #     - name: Echo the greeting's time
-  #       run: echo 'The time was ${{ steps.hello.outputs.time }}.'
-  #     - name: xxx
-  #       run: |
-  #         whoami
-  #         pwd
-  #         ls -lah
-  docker:
-#     container:
-#       image: node:10.16-jessie
-#       env:
-#         NODE_ENV: development
-#       ports:
-#         - 80
-#       volumes:
-#         - my_docker_volume:/volume_mount
-#       options: --cpus 1
+  kala:
     runs-on: ubuntu-latest
     steps:
 #       - name: My first step
@@ -45,11 +16,5 @@ jobs:
           whoami
           ls -lah
       - run: npm ci | true
-      - run: cd /volume_mount
       - run: pwd
-
-
-# - Your workflow file was invalid: The pipeline is not valid. .github/workflows/continuous-integration-workflow.yml (Line: 27, Col: 5): Required property is missing: runs-on
-
-# - Your workflow file was invalid: The pipeline is not valid. .github/workflows/continuous-integration-workflow.yml (Line: 27, Col: 5): Required property is missing: runs-on
 
