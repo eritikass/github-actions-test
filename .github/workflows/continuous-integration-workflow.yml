@@ -35,7 +35,7 @@ jobs:
 #       options: --cpus 1
     runs-on: ubuntu-latest
     steps:
-      - name: My first step
+#       - name: My first step
 #         uses: docker://node:12
       - run: node -v
       - run: docker ps
