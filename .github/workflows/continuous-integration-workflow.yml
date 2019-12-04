@@ -37,7 +37,7 @@ jobs:
     steps:
       - name: My first step
         uses: docker://node:12
-      - run: git show
+      - run: node -v
       - run: docker ps
       - run: |
           node -v
