@@ -9,6 +9,7 @@ jobs:
 #       - name: My first step
 #         uses: docker://node:12
       - run: node -v
+      - run: python --version
       - run: docker ps
       - run: |
           node -v
