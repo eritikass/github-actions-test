@@ -1,4 +1,4 @@
-name: Greet Everyone
+name: Wuff-Wuff
 # This workflow is triggered on pushes to the repository.
 on: [push]
 
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: My first step
-        uses: docker://node:12
+#         uses: docker://node:12
       - run: node -v
       - run: docker ps
       - run: |
